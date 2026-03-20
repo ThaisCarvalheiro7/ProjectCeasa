@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Produtor</title>
+  <link rel="stylesheet" href="/src/styles/cadastroProdutor.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <div class="header">
+        <h1>Criar Conta</h1>
+        <p>Escolha o tipo de conta que você deseja criar</p>
+      </div>
+
+      <div class="account-type">
+        <a href="/cadastroProdutor.html"><button type="button" class="type-btn active">Produtor</button></a>
+        <a href="/cadastroCliente.html"><button type="button" class="type-btn">Cliente</button></a>
+        <a href="/cadastroMotoboy.html"><button type="button" class="type-btn">Motoboy</button></a>
+      </div>
+
+      <form id="producerForm" class="form-grid">
+        <div class="form-group">
+          <label for="propriedade">Nome da Propriedade/Fazenda *</label>
+          <input type="text" id="propriedade" placeholder="Sua propriedade" />
+        </div>
+
+        <div class="form-group">
+          <label for="responsavel">Nome do Responsável *</label>
+          <input type="text" id="responsavel" placeholder="Seu nome completo" />
+        </div>
+
+        <div class="form-group">
+          <label for="cpfCnpj">CPF ou CNPJ *</label>
+          <input type="text" id="cpfCnpj" placeholder="000.000.000-00" maxlength="18" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail *</label>
+          <input type="email" id="email" placeholder="seu@email.com" />
+        </div>
+
+        <div class="form-group">
+          <label for="telefone">Telefone/WhatsApp *</label>
+          <input type="text" id="telefone" placeholder="(00) 00000-0000" maxlength="15" />
+        </div>
+
+        <div class="form-group">
+          <label for="tamanho">Tamanho da Propriedade *</label>
+          <select id="tamanho">
+            <option value="">Selecione...</option>
+            <option value="pequena">Pequena</option>
+            <option value="media">Média</option>
+            <option value="grande">Grande</option>
+          </select>
+        </div>
+
+        <div class="form-group full">
+          <label>Tipos de Produtos que Cultiva *</label>
+          <div class="checkbox-grid">
+            <label><input type="checkbox" name="produtos" value="Verduras" /> Verduras</label>
+            <label><input type="checkbox" name="produtos" value="Legumes" /> Legumes</label>
+            <label><input type="checkbox" name="produtos" value="Frutas" /> Frutas</label>
+            <label><input type="checkbox" name="produtos" value="Grãos" /> Grãos</label>
+            <label><input type="checkbox" name="produtos" value="Hortaliças" /> Hortaliças</label>
+            <label><input type="checkbox" name="produtos" value="Outros" /> Outros</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="cep">CEP *</label>
+          <input type="text" id="cep" placeholder="00000-000" maxlength="9" />
+        </div>
+
+        <div class="form-group">
+          <label for="cidade">Cidade *</label>
+          <input type="text" id="cidade" placeholder="Sua cidade" />
+        </div>
+
+        <div class="form-group">
+          <label for="estado">Estado *</label>
+          <input type="text" id="estado" placeholder="UF" maxlength="2" />
+        </div>
+
+        <div class="form-group full">
+          <label for="endereco">Endereço Completo *</label>
+          <input type="text" id="endereco" placeholder="Rua, número, complemento" />
+        </div>
+
+        <div class="checkbox-box full">
+          <label>
+            <input type="checkbox" id="certificacao" />
+            Possuo certificação de produtos orgânicos
+          </label>
+        </div>
+
+        <div class="form-group password-group">
+          <label for="senha">Senha *</label>
+          <div class="input-password">
+            <input type="password" id="senha" placeholder="Mínimo 6 caracteres" />
+            <button type="button" class="toggle-password" data-target="senha">👁</button>
+          </div>
+        </div>
+
+        <div class="form-group password-group">
+          <label for="confirmarSenha">Confirmar Senha *</label>
+          <div class="input-password">
+            <input type="password" id="confirmarSenha" placeholder="Repita a senha" />
+            <button type="button" class="toggle-password" data-target="confirmarSenha">👁</button>
+          </div>
+        </div>
+
+        <div class="full">
+          <button type="submit" class="submit-btn">Cadastrar como Produtor</button>
+        </div>
+
+        <p id="formMessage" class="form-message"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="/js/cadastroProdutor.js"></script>
+</body>
+</html>
