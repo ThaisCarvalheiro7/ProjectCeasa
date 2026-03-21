@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cadastro de Produtor</title>
-  <link rel="stylesheet" href="/src/styles/cadastroProdutor.css" />
+  <link rel="stylesheet" href="src/styles/cadastroProdutor.css" />
 </head>
 <body>
   <main class="page">
@@ -15,9 +15,9 @@
       </div>
 
       <div class="account-type">
-        <a href="/cadastroProdutor.html"><button type="button" class="type-btn active">Produtor</button></a>
-        <a href="/cadastroCliente.html"><button type="button" class="type-btn">Cliente</button></a>
-        <a href="/cadastroMotoboy.html"><button type="button" class="type-btn">Motoboy</button></a>
+        <a href="cadastroProdutor.html"><button type="button" class="type-btn active">Produtor</button></a>
+        <a href="cadastroCliente.html"><button type="button" class="type-btn">Cliente</button></a>
+        <a href="cadastroMotoboy.html"><button type="button" class="type-btn">Motoboy</button></a>
       </div>
 
       <form id="producerForm" class="form-grid">
@@ -115,11 +115,16 @@
           <button type="submit" class="submit-btn">Cadastrar como Produtor</button>
         </div>
 
+        <div class="home">
+          <a href="login.html"><button type="button" class="home-btn"> Voltar para tela de Login</button></a>
+        </div>
+
+
         <p id="formMessage" class="form-message"></p>
       </form>
     </section>
   </main>
 
-  <script src="/js/cadastroProdutor.js"></script>
+  <script src="js/cadastroProdutor.js"></script>
 </body>
 </html>

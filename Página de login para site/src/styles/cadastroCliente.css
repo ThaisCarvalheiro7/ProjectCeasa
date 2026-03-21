@@ -46,9 +46,9 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding: 4px 60px;
-  gap: 200px;
+
   margin-bottom: 26px;
-  display: flex;
+
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -59,11 +59,16 @@ body {
   background: transparent;
   border-radius: 10px;
   height: 40px;
-  padding: 10px;
+  padding: 10px 100px;
   cursor: pointer;
   font-size: 14px;
   color: #334155;
   transition: 0.2s ease;
+}
+
+.type-btn:hover{
+  background: #16a34a;
+
 }
 
 .type-btn.active {
@@ -188,6 +193,28 @@ body {
   color: #dc2626;
 }
 
+.home{
+  grid-column: 1 / -1;
+}
+
+.home-btn {
+  width: 100%;
+  height: 48px;
+  border: 1.5px solid #09a63e;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #09a63e;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+  margin-top: 8px;
+  }
+
+  .home-btn:hover {
+  background: #e5f0e7;
+}
+
 @media (max-width: 768px) {
   .card {
     padding: 22px 16px;
@@ -214,4 +241,6 @@ body {
   .type-btn.active {
     border-radius: 12px;
   }
+
+  
 }

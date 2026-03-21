@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cadastro de Cliente</title>
-  <link rel="stylesheet" href="/src/styles/cadastroCliente.css" />
+  <link rel="stylesheet" href="src/styles/cadastroCliente.css" />
 </head>
 <body>
   <main class="page">
@@ -15,9 +15,9 @@
       </div>
 
       <div class="account-type">
-        <a href="/cadastroProdutor.html"><button class="type-btn">Produtor</button></a>
-        <a href="/cadastroCliente.html"><button class="type-btn active">Cliente</button></a>
-        <a href="/cadastroMotoboy.html"><button class="type-btn">Motoboy</button></a>
+        <a href="cadastroProdutor.html"><button class="type-btn">Produtor</button></a>
+        <a href="cadastroCliente.html"><button class="type-btn active">Cliente</button></a>
+        <a href="cadastroMotoboy.html"><button class="type-btn">Motoboy</button></a>
       </div>
 
       <form id="clientForm" class="form-grid">
@@ -95,11 +95,15 @@
           <button type="submit" class="submit-btn">Cadastrar como Cliente</button>
         </div>
 
+        <div class="home">
+          <a href="login.html"><button type="button" class="home-btn"> Voltar para tela de Login</button></a>
+        </div>
+
         <p id="formMessage" class="form-message"></p>
       </form>
     </section>
   </main>
 
-  <script src="/js/cadastroCliente.js"></script>
+  <script src="js/cadastroCliente.js"></script>
 </body>
 </html>
