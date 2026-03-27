@@ -17,12 +17,25 @@ toggleButtons.forEach((button) => {
   });
 });
 
-function aplicarMascaraCPF(valor) {
-  return valor
-    .replace(/\D/g, "")
-    .replace(/(\d{3})(\d)/, "$1.$2")
-    .replace(/(\d{3})(\d)/, "$1.$2")
-    .replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+function aplicarMascaraCpfCnpj(valor) {
+  const numeros = valor.replace(/\D/g, "");
+
+  if (numeros.length <= 11) {
+    // CPF
+    return numeros
+      .slice(0, 11)
+      .replace(/(\d{3})(\d)/, "$1.$2")
+      .replace(/(\d{3})(\d)/, "$1.$2")
+      .replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+  }
+
+  // CNPJ
+  return numeros
+    .slice(0, 14)
+    .replace(/^(\d{2})(\d)/, "$1.$2")
+    .replace(/^(\d{2})\.(\d{3})(\d)/, "$1.$2.$3")
+    .replace(/\.(\d{3})(\d)/, ".$1/$2")
+    .replace(/(\d{4})(\d)/, "$1-$2");
 }
 
 function aplicarMascaraTelefone(valor) {
@@ -32,8 +45,71 @@ function aplicarMascaraTelefone(valor) {
     .replace(/(\d{5})(\d)/, "$1-$2");
 }
 
-document.getElementById("cpf").addEventListener("input", (e) => {
-  e.target.value = aplicarMascaraCPF(e.target.value);
+function validarCPF(cpf) {
+  cpf = cpf.replace(/\D/g, "");
+
+  if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) return false;
+
+  let soma = 0;
+  let resto;
+
+  for (let i = 1; i <= 9; i++) {
+    soma += parseInt(cpf.substring(i - 1, i)) * (11 - i);
+  }
+
+  resto = (soma * 10) % 11;
+  if (resto === 10 || resto === 11) resto = 0;
+  if (resto !== parseInt(cpf.substring(9, 10))) return false;
+
+  soma = 0;
+
+  for (let i = 1; i <= 10; i++) {
+    soma += parseInt(cpf.substring(i - 1, i)) * (12 - i);
+  }
+
+  resto = (soma * 10) % 11;
+  if (resto === 10 || resto === 11) resto = 0;
+
+  return resto === parseInt(cpf.substring(10, 11));
+}
+
+function validarCNPJ(cnpj) {
+  cnpj = cnpj.replace(/\D/g, "");
+
+  if (cnpj.length !== 14 || /^(\d)\1+$/.test(cnpj)) return false;
+
+  let tamanho = cnpj.length - 2;
+  let numeros = cnpj.substring(0, tamanho);
+  let digitos = cnpj.substring(tamanho);
+
+  let soma = 0;
+  let pos = tamanho - 7;
+
+  for (let i = tamanho; i >= 1; i--) {
+    soma += numeros.charAt(tamanho - i) * pos--;
+    if (pos < 2) pos = 9;
+  }
+
+  let resultado = soma % 11 < 2 ? 0 : 11 - (soma % 11);
+  if (resultado != digitos.charAt(0)) return false;
+
+  tamanho += 1;
+  numeros = cnpj.substring(0, tamanho);
+  soma = 0;
+  pos = tamanho - 7;
+
+  for (let i = tamanho; i >= 1; i--) {
+    soma += numeros.charAt(tamanho - i) * pos--;
+    if (pos < 2) pos = 9;
+  }
+
+  resultado = soma % 11 < 2 ? 0 : 11 - (soma % 11);
+
+  return resultado == digitos.charAt(1);
+}
+
+document.getElementById("cpfCnpj").addEventListener("input", (e) => {
+  e.target.value = aplicarMascaraCpfCnpj(e.target.value);
 });
 
 document.getElementById("telefone").addEventListener("input", (e) => {
@@ -44,12 +120,12 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   const nome = document.getElementById("nome").value.trim();
-  const cpf = document.getElementById("cpf").value.trim();
+  const cpfCnpj = document.getElementById("cpfCnpj").value.trim();
   const email = document.getElementById("email").value.trim();
   const telefone = document.getElementById("telefone").value.trim();
-  const nascimento = document.getElementById("nascimento").value;
-  const cidade = document.getElementById("cidade").value.trim();
+  const num_Endereco = document.getElementById("num_Endereco").value.trim();
   const estado = document.getElementById("estado").value.trim();
+  const cep = document.getElementById("cep").value.trim();
   const endereco = document.getElementById("endereco").value.trim();
   const senha = document.getElementById("senha").value.trim();
   const confirmarSenha = document.getElementById("confirmarSenha").value.trim();
@@ -58,7 +134,9 @@ form.addEventListener("submit", (e) => {
   formMessage.textContent = "";
   formMessage.className = "form-message";
 
-  if (!nome || !cpf || !email || !telefone || !nascimento || !cidade || !estado || !endereco || !senha || !confirmarSenha) {
+  // PRECISA TER VERIFICAÇÃO PARA O ENDEREÇO TER NO MÁXIMO 5 DÍGITOS, PARA EVITAR QUE O BANCO DE DADOS ESTOURE -marcZ
+
+  if (!nome || !cpfCnpj || !email || !telefone || !num_Endereco || !estado || !cep || !endereco || !senha || !senha || !confirmarSenha) {
     formMessage.textContent = "Preencha todos os campos obrigatórios.";
     formMessage.classList.add("error");
     return;
