@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgroFast | Cadastro de Produtos</title>
+  <link rel="stylesheet" href="/src/styles/CadProd.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <div class="brand">
+        <div class="brand-icon">🍃</div>
+        <div class="brand-text">
+          <h1>AgroFast</h1>
+          <span>Da terra para você</span>
+        </div>
+      </div>
+
+      <nav class="menu">
+        <a href="#">Início</a>
+        <a href="#">Produtos</a>
+        <a href="#">Categorias</a>
+      </nav>
+
+      <a href="#" class="login-btn">Voltar</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Cadastrar Produto</h2>
+      <p>Adicione novos itens em sua loja</p>
+    </div>
+  </section>
+
+  <main class="page">
+    <div class="container">
+      <section class="form-card">
+        <form class="product-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="nome">Nome do produto</label>
+              <input type="text" id="nome" placeholder="Ex: Tomate" />
+            </div>
+
+            <div class="form-group">
+              <label for="categoria">Categoria</label>
+              <select id="categoria">
+                <option value="">Selecione uma categoria</option>
+                <option>Verduras</option>
+                <option>Legumes</option>
+                <option>Frutas</option>
+                <option>Laticínios</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="preco">Preço</label>
+              <input type="number" id="preco" placeholder="Ex: 7.90" step="0.01" />
+            </div>
+
+            <div class="form-group">
+              <label for="unidade">Unidade</label>
+              <select id="unidade">
+                <option value="">Selecione</option>
+                <option>kg</option>
+                <option>unidade</option>
+                <option>bandeja</option>
+              </select>
+            </div>
+             <div class="form-group">
+              <label for="contato">Contato para venda do produto</label>
+              <input type="text" id="contato" placeholder="Ex: (11) 99999-9999" />
+            </div>
+            <div class="form-group full">
+              <label for="descricao">Descrição</label>
+              <textarea id="descricao" rows="5" placeholder="Descreva o produto..."></textarea>
+            </div>
+
+            <div class="form-group full">
+              <label for="imagem">Imagem do produto</label>
+              <input type="file" id="imagem" />
+            </div>
+
+            <div class="form-group checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" />
+                Produto orgânico
+              </label>
+            </div>
+
+            <div class="form-group checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" />
+                Produto fresco
+              </label>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="btn-secondary">Cancelar</button>
+            <button type="submit" class="btn-primary">Cadastrar Produto</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
