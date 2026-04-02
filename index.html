@@ -1,80 +1,188 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login - Produtos Orgânicos</title>
-  <link rel="stylesheet" href="src/styles/index.css" />
+  <title>AgroFast</title>
+  <link rel="stylesheet" href="/src/styles/style_index.css" />
 </head>
-
 <body>
-  <div class="container">
-    <div class="logo">
-      <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round"
-          d="M12 21c4.5-1.5 8-6 8-11V4s-7 .5-10 4c-2.5 2.5-3 6-1.5 8.5M4 20c2-2 4-3 7-4" />
-      </svg>
+
+  <header>
+    <div class="logo">AgroFast</div>
+    <nav>
+      <a href="#">Como funciona</a>
+      <a href="#">Produtos</a>
+      <a href="#">Categorias</a>
+    </nav>
+    <button class="btn-login">Entrar</button>
+  </header>
+
+  <section class="main-cadastro">
+    <h1>
+      Produtos frescos,<br>
+      <span class="txt-verde">direto</span><br>
+      <span class="txt-marrom">da terra</span> para você
+    </h1>
+
+    <p>
+      Conectamos produtores rurais diretamente aos consumidores.
+      Alimentos frescos, preços justos e apoio à agricultura local.
+    </p>
+
+    <div class="btn-main">
+      <a href="/login.html"><button class="btn-comprar">Começar a comprar</button></a>
+      <a href="/cadastroProdutor.html"><button class="btn-produtor">Sou produtor</button></a>
     </div>
+  </section>
 
-    <h1>Bem-vindo de volta</h1>
-    <p class="subtitle">Entre na sua conta para acessar produtos orgânicos frescos</p>
+  <section class="how-it-works">
+  <div class="container">
+    <h2>Como funciona o <span>AgroFast</span></h2>
+    <p class="subtitle">
+      Conectamos você diretamente ao produtor rural em apenas 3 passos simples
+    </p>
 
-    <form id="loginForm">
-      <div class="form-group">
-        <label for="email">Email</label>
-        <div class="input-wrapper">
-          <span class="input-icon">
-            <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16v12H4z" />
-              <path stroke-linecap="round" stroke-linejoin="round" d="M4 7l8 6 8-6" />
-            </svg>
-          </span>
-          <input type="email" id="email" placeholder="seu@email.com" required />
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="password">Senha</label>
-        <div class="input-wrapper">
-          <span class="input-icon">
-            <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
-              <rect x="5" y="11" width="14" height="9" rx="2"></rect>
-              <path stroke-linecap="round" stroke-linejoin="round" d="M8 11V8a4 4 0 0 1 8 0v3" />
-            </svg>
-          </span>
-          <input type="password" id="password" placeholder="••••••••" required />
-          <button type="button" class="toggle-password" id="togglePassword" aria-label="Mostrar senha">
-            <svg id="eyeIcon" fill="none" viewBox="0 0 24 24" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6z" />
-              <circle cx="12" cy="12" r="3"></circle>
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      <div class="options">
-        <label class="remember">
-          <input type="checkbox" />
-          <span>Lembrar de mim</span>
-        </label>
-        <a href="#" class="forgot-password">Esqueceu a senha?</a>
-      </div>
-
-      <button type="submit" class="btn btn-primary">Entrar</button>
-
-      <div class="divider">
-        <span>Não tem uma conta?</span>
-      </div>
-
-      <a href="cadastroCliente.html"><button type="button" class="btn btn-outline">Cadastrar-se</button></a>
-
-      <p class="message" id="message">Login enviado com sucesso.</p>
-    </form>
+  <div class="steps">
+  
+  <div class="step">
+    <div class="icon green">
+      <img src="/img/lupa.png" alt="Buscar">
+    </div>
+    <h3>Encontre produtos</h3>
+    <p>Busque por produtos frescos de produtores locais na sua região</p>
   </div>
 
-  <script src="js/index.js"></script>
-</body>
+  <div class="step">
+    <div class="icon yellow">
+      <img src="https://cdn-icons-png.flaticon.com/512/5780/5780410.png" alt="Compra">
+    </div>
+    <h3>Compre direto</h3>
+    <p>Compre diretamente do produtor, sem intermediários</p>
+  </div>
 
+  <div class="step">
+    <div class="icon orange">
+      <img src="https://cdn-icons-png.flaticon.com/512/995/995724.png" alt="Entrega">
+    </div>
+    <h3>Receba em casa</h3>
+    <p>Receba produtos frescos na porta da sua casa</p>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+<section class="categories">
+  <div class="container">
+
+    <h2>Explore por <span>categoria</span></h2>
+    <p class="subtitle">Encontre exatamente o que você precisa</p>
+
+    <div class="cards">
+
+
+      <div class="card">
+        <img src="https://images.pexels.com/photos/12932765/pexels-photo-12932765.jpeg" alt="Verduras">
+        <div class="overlay"></div>
+        <div class="content">
+          <h3>Verduras</h3>
+          <p>120+ produtos</p>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <img src="https://images.pexels.com/photos/36836682/pexels-photo-36836682.jpeg" alt="Legumes">
+        <div class="overlay"></div>
+        <div class="content">
+          <h3>Legumes</h3>
+          <p>85+ produtos</p>
+        </div>
+      </div>
+
+  
+      <div class="card">
+        <img src="https://images.pexels.com/photos/10490101/pexels-photo-10490101.jpeg" alt="Frutas">
+        <div class="overlay"></div>
+        <div class="content">
+          <h3>Frutas</h3>
+          <p>150+ produtos</p>
+        </div>
+      </div>
+
+  
+      <div class="card">
+        <img src="https://images.pexels.com/photos/8542326/pexels-photo-8542326.jpeg" alt="Laticínios">
+        <div class="overlay"></div>
+        <div class="content">
+          <h3>Laticínios</h3>
+          <p>45+ produtos</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <div class="footer-container">
+
+   
+    <div class="footer-col">
+      <h3 class="logo">🌱 AgroFast</h3>
+      <p>
+            Conectando produtores rurais e consumidores para uma alimentação mais saudável e sustentável.
+      </p>
+    </div>
+
+
+    <div class="footer-col">
+      <h4>Para Você</h4>
+      <ul>
+        <li>Como comprar</li>
+        <li>Produtos</li>
+        <li>Categorias</li>
+        <li>Entrega</li>
+        <li>Perguntas frequentes</li>
+      </ul>
+    </div>
+
+
+    <div class="footer-col">
+      <h4>Para Produtores</h4>
+      <ul>
+        <li>Cadastre-se</li>
+        <li>Como vender</li>
+        <li>Taxas e comissões</li>
+        <li>Central de ajuda</li>
+        <li>Blog</li>
+      </ul>
+    </div>
+
+
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <ul>
+        <li>📍 Tarumã<br>Curitiba, PR</li>
+        <li>📞 (41) xxxx-xxxx</li>
+        <li>✉️ contato@agrofast.com.br</li>
+      </ul>
+    </div>
+
+  </div>
+
+ 
+  <div class="footer-bottom">
+    <p>© 2026 AgroFast. Todos os direitos reservados.</p>
+
+    <div class="links">
+      <a href="#">Termos de uso</a>
+      <a href="#">Política de privacidade</a>
+      <a href="#">Cookies</a>
+    </div>
+  </div>
+</footer>
+</body>
 </html>
