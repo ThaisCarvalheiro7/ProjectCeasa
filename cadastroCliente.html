@@ -3,20 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cadastro de Cliente</title>
-  <link rel="stylesheet" href="src/styles/style.css" />
+  <title>AgroFast | Cadastro de Cliente</title>
+  <link rel="stylesheet" href="src/styles/telaCadastro.css" />
 </head>
 <body>
   <main class="page">
     <section class="card">
       <div class="header">
         <h1>Criar Conta</h1>
-        <p>Preencha os dados abaixo para criar sua conta de Cliente</p>
+        <p>Preencha os dados abaixo para criar sua conta de Produtor</p>
       </div>
 
       <div class="account-type">
         <a href="cadastroCliente.html"><button class="type-btn active">Cliente</button></a>
         <a href="cadastroEntregador.html"><button class="type-btn">Entregador</button></a>
+        <a href="cadastroProdutor.html"><button class="type-btn">Produtor</button></a>
       </div>
 
       <form id="clientForm" class="form-grid">
@@ -83,9 +84,10 @@
           <button type="submit" class="submit-btn">Cadastrar como Cliente</button>
         </div>
 
-        <div class="home">
-          <a href="/login.html"><button type="button" class="home-btn"> Voltar para tela de Login</button></a>
-        </div>
+        
+          <div class="home">
+            <a href="/login.html"><button type="button" class="home-btn"> Voltar para tela de Login</button></a>
+          </div>
 
         <p id="formMessage" class="form-message"></p>
       </form>

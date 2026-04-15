@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroFast | Entregador</title>
+    <link rel="stylesheet" href="src/styles/entregador.css">
+</head>
+<body>
+    <header class="header">
+  <div class="header-left">
+    <div class="avatar">
+  <img src="img/perfil.png"Foto de perfil">
+</div>
+    <div>
+      <div class="header-name">Thais</div>
+      <div class="header-role">Entregador AgroFast</div>
+    </div>
+  </div>
+  <div class="header-stats">
+    <div class="stat"><div class="stat-num">4</div><div class="stat-label">Total</div></div>
+    <div class="stat"><div class="stat-num">1</div><div class="stat-label">Entregues</div></div>
+    <div class="stat"><div class="stat-num">1</div><div class="stat-label">Em trânsito</div></div>
+  </div>
+</header>
+ 
+<div class="main">
+  <!-- LEFT COL -->
+  <div>
+    <!-- Entregas do Dia -->
+    <div class="section-header">
+      <span class="section-title">Entregas do Dia</span>
+      <span class="section-date">15 de Abril, 2026</span>
+    </div>
+ 
+    <div class="deliveries">
+ 
+      <div class="card active" onclick="selectDelivery(this, '#3421')">
+        <div class="card-top">
+          <div class="card-id-wrap">
+            <div class="dot dot-transit"></div>
+            <span class="card-id">#3421</span>
+          </div>
+          <span class="badge badge-transit">🚚 Em trânsito</span>
+        </div>
+        <div class="card-name">Maria Silva</div>
+        <div class="card-meta">
+          <div class="meta-item">
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="var(--green)" stroke-width="2.5"><path d="M12 2L4 7v10l8 5 8-5V7z"/></svg>
+            2.3 km
+          </div>
+          <div class="meta-item">
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            15 min
+          </div>
+          <div class="meta-item">
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+            2 itens
+          </div>
+        </div>
+      </div>
+ 
+      <div class="card" onclick="selectDelivery(this, '#3422')">
+        <div class="card-top">
+          <div class="card-id-wrap">
+            <div class="dot dot-pending"></div>
+            <span class="card-id">#3422</span>
+          </div>
+          <span class="badge badge-pending">⏳ Pendente</span>
+        </div>
+        <div class="card-name">João Santos</div>
+        <div class="card-meta">
+          <div class="meta-item">
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="var(--green)" stroke-width="2.5"><path d="M12 2L4 7v10l8 5 8-5V7z"/></svg>
+            3.8 km
+          </div>
+          <div class="meta-item">
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            20 min
+          </div>
+          <div class="meta-item">
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+            3 itens
+          </div>
+        </div>
+      </div>
+ 
+      <div class="card" onclick="selectDelivery(this, '#3423')">
+        <div class="card-top">
+          <div class="card-id-wrap">
+            <div class="dot dot-pending"></div>
+            <span class="card-id">#3423</span>
+          </div>
+          <span class="badge badge-pending">⏳ Pendente</span>
+        </div>
+        <div class="card-name">Ana Costa</div>
+        <div class="card-meta">
+          <div class="meta-item">
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="var(--green)" stroke-width="2.5"><path d="M12 2L4 7v10l8 5 8-5V7z"/></svg>
+            5.1 km
+          </div>
+          <div class="meta-item">
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            25 min
+          </div>
+          <div class="meta-item">
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+            2 itens
+          </div>
+        </div>
+      </div>
+ 
+      <div class="card" onclick="selectDelivery(this, '#3420')">
+        <div class="card-top">
+          <div class="card-id-wrap">
+            <div class="dot dot-done"></div>
+            <span class="card-id">#3420</span>
+          </div>
+          <span class="badge badge-done">✅ Entregue</span>
+        </div>
+        <div class="card-name">Pedro Oliveira</div>
+        <div class="card-meta">
+          <div class="meta-item">
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="var(--green)" stroke-width="2.5"><path d="M12 2L4 7v10l8 5 8-5V7z"/></svg>
+            4.2 km
+          </div>
+          <div class="meta-item">
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            22 min
+          </div>
+          <div class="meta-item">
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+            2 itens
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+    <!-- Resumo da Rota -->
+    <div style="margin-top:28px;">
+      <div class="section-header">
+        <span class="section-title">Resumo da Rota do Dia</span>
+      </div>
+      <div class="summary-grid">
+        <div class="summary-card">
+          <div class="summary-icon s-green">🧭</div>
+          <div><div class="summary-num">15.4 km</div><div class="summary-lbl">Distância Total</div></div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-icon s-orange">⏱️</div>
+          <div><div class="summary-num">1h 22min</div><div class="summary-lbl">Tempo Estimado</div></div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-icon s-blue">📦</div>
+          <div><div class="summary-num">9</div><div class="summary-lbl">Produtos Total</div></div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-icon s-purple">⭐</div>
+          <div><div class="summary-num">R$ 130,00</div><div class="summary-lbl">Valor Total</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- RIGHT PANEL -->
+  <div class="panel">
+ 
+    <!-- Map -->
+    <div class="map-card">
+      <div class="map-header">
+        <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M12 2L4 7v10l8 5 8-5V7z"/></svg>
+        2.3 km &nbsp;•&nbsp; 15 min
+      </div>
+      <div class="map-body">
+        <svg class="map-svg" viewBox="0 0 380 170" xmlns="http://www.w3.org/2000/svg">
+          <!-- background -->
+          <rect width="380" height="170" fill="#EEF3EC"/>
+          <!-- streets -->
+          <line x1="0" y1="85" x2="380" y2="85" stroke="#D4DDD0" stroke-width="8"/>
+          <line x1="190" y1="0" x2="190" y2="170" stroke="#D4DDD0" stroke-width="6"/>
+          <line x1="80" y1="0" x2="80" y2="170" stroke="#D4DDD0" stroke-width="4"/>
+          <line x1="300" y1="0" x2="300" y2="170" stroke="#D4DDD0" stroke-width="4"/>
+          <line x1="0" y1="40" x2="380" y2="40" stroke="#D4DDD0" stroke-width="3"/>
+          <line x1="0" y1="130" x2="380" y2="130" stroke="#D4DDD0" stroke-width="3"/>
+          <!-- route path -->
+          <path d="M 50 90 Q 100 80 140 95 Q 180 110 220 90 Q 270 70 310 80" 
+                stroke="#2D9B4E" stroke-width="3.5" fill="none" 
+                stroke-dasharray="8 4" stroke-linecap="round"/>
+        </svg>
+        <!-- nodes -->
+        <div class="node-origin"></div>
+        <div class="route-node node-1">1</div>
+        <div class="route-node node-2">2</div>
+        <div class="route-node node-3">3</div>
+      </div>
+    </div>
+ 
+    <!-- Detail Card -->
+    <div class="detail-card" id="detail-card">
+      <div class="detail-header">
+        <span class="detail-title">Detalhes da Entrega</span>
+        <span class="detail-id" id="detail-id">#3421</span>
+      </div>
+      <div class="detail-body">
+        <div class="detail-row">
+          <div class="detail-icon icon-person">👤</div>
+          <div>
+            <div class="detail-label">Cliente</div>
+            <div class="detail-value" id="detail-name">Maria Silva</div>
+            <div class="detail-sub" id="detail-phone">📞 (11) 98765-4321</div>
+          </div>
+        </div>
+        <hr class="divider">
+        <div class="detail-row">
+          <div class="detail-icon icon-location">📍</div>
+          <div>
+            <div class="detail-label">Endereço</div>
+            <div class="detail-value" id="detail-addr">Rua das Flores, 123</div>
+            <div class="detail-sub" id="detail-city">Centro, São Paulo – SP</div>
+          </div>
+        </div>
+        <hr class="divider">
+        <div class="detail-row" style="align-items: flex-start;">
+          <div class="detail-icon icon-box">🌿</div>
+          <div style="width:100%">
+            <div class="detail-label">Produtos</div>
+            <div class="products-list" id="products-list">
+              <div class="product-item">
+                <div><div class="product-name">Alface Crespa</div><div class="product-farm">Fazenda Verde Vale</div></div>
+                <div class="product-qty">2 maços</div>
+              </div>
+              <div class="product-item">
+                <div><div class="product-name">Tomate Cereja</div><div class="product-farm">Sítio do Sol</div></div>
+                <div class="product-qty">500g</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="divider">
+        <div class="total-row">
+          <span class="total-label">Valor Total</span>
+          <span class="total-value" id="detail-total">R$ 28,50</span>
+        </div>
+      </div>
+      <div class="btn-group">
+        <button class="btn btn-primary" onclick="confirmar()">✅ Confirmar Entrega</button>
+        <button class="btn btn-outline">📞 Ligar para Cliente</button>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+<!-- BOTTOM NAV (mobile) -->
+<nav class="bottom-nav">
+  <button class="nav-btn"><span class="nav-icon">🌿</span> Catálogo</button>
+  <button class="nav-btn active"><span class="nav-icon">🚚</span> Entregas</button>
+</nav>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/styles/produtor.css">
+    <title>AgroFast | Produtor</title>
+</head>
+<body>
+    <header class="header">
+  <div class="header-left">
+    <div class="farm-avatar">🌿</div>
+    <div>
+      <div class="farm-name">Fazenda Verde Vale</div>
+      <div class="farm-meta">
+        <div class="farm-loc">📍 Ibiúna, SP</div>
+        <div class="farm-rating">
+          <span class="star-icon">★</span> 4.8
+          <span style="opacity:.7; font-weight:400">(234 avaliações)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="btn-novo">
+    <span style="font-size:16px">＋</span>
+    <span>Novo Produto</span>
+  </button>
+</header>
+ 
+<!-- TABS -->
+<nav class="tabs-bar">
+  <div class="tab active">📊 Visão Geral</div>
+</nav>
+ 
+<!-- CONTENT -->
+<div class="content">
+ 
+  <!-- KPI CARDS -->
+  <div class="kpi-grid">
+    <div class="kpi-card">
+      <div>
+        <div class="kpi-label">Vendas (Abril)</div>
+        <div class="kpi-value" style="color:var(--green)">R$ 5.200</div>
+        <div class="kpi-sub kpi-up">↑ +15.3% vs mês anterior</div>
+      </div>
+      <div class="kpi-icon kpi-green">💰</div>
+    </div>
+    <div class="kpi-card">
+      <div>
+        <div class="kpi-label">Pedidos</div>
+        <div class="kpi-value" style="color:var(--blue)">89</div>
+        <div class="kpi-sub kpi-up">↑ +12% vs mês anterior</div>
+      </div>
+      <div class="kpi-icon kpi-blue">🛒</div>
+    </div>
+    <div class="kpi-card">
+      <div>
+        <div class="kpi-label">Produtos Ativos</div>
+        <div class="kpi-value">2</div>
+        <div class="kpi-sub" style="color:var(--text-soft)">de 4 produtos</div>
+      </div>
+      <div class="kpi-icon kpi-orange">📦</div>
+    </div>
+    <div class="kpi-card">
+      <div>
+        <div class="kpi-label">Avaliação Média</div>
+        <div class="kpi-value" style="color:var(--orange)">4.8</div>
+        <div class="kpi-sub" style="color:var(--text-soft)">⭐ 234 avaliações</div>
+      </div>
+      <div class="kpi-icon kpi-star">⭐</div>
+    </div>
+  </div>
+ 
+  <!-- CHARTS -->
+  <div class="charts-grid">
+    <!-- Line Chart -->
+    <div class="chart-card">
+      <div class="chart-title">Evolução de Vendas (R$)</div>
+      <div class="chart-wrap">
+        <svg class="chart" id="lineChart" viewBox="0 0 460 200" preserveAspectRatio="none"></svg>
+      </div>
+    </div>
+    <!-- Bar Chart -->
+    <div class="chart-card">
+      <div class="chart-title">Pedidos por Mês</div>
+      <div class="chart-wrap">
+        <svg class="chart" id="barChart" viewBox="0 0 460 200" preserveAspectRatio="none"></svg>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- PRODUCTS -->
+  <div class="section-title">Produtos Mais Vendidos</div>
+  <div class="products-grid">
+ 
+    <div class="prod-card">
+      <div class="prod-img-placeholder" style="background:#E8F5E9;">🥬</div>
+      <div class="prod-body">
+        <div class="prod-name">Alface Crespa</div>
+        <div class="prod-sold">127 unidades vendidas</div>
+        <div class="prod-footer">
+          <span class="prod-price">R$ 4,50</span>
+          <span class="prod-stock stock-ok">45 em estoque</span>
+        </div>
+      </div>
+    </div>
+ 
+    <div class="prod-card">
+      <div class="prod-img-placeholder" style="background:#FFF3E0;">🍅</div>
+      <div class="prod-body">
+        <div class="prod-name">Tomate Cereja</div>
+        <div class="prod-sold">89 unidades vendidas</div>
+        <div class="prod-footer">
+          <span class="prod-price">R$ 12,00</span>
+          <span class="prod-stock stock-low">8 em estoque</span>
+        </div>
+      </div>
+    </div>
+ 
+    <div class="prod-card">
+      <div class="prod-img-placeholder" style="background:#FFF8E1;">🥕</div>
+      <div class="prod-body">
+        <div class="prod-name">Cenoura Orgânica</div>
+        <div class="prod-sold">156 unidades vendidas</div>
+        <div class="prod-footer">
+          <span class="prod-price">R$ 6,50</span>
+          <span class="prod-stock stock-ok">32 em estoque</span>
+        </div>
+      </div>
+    </div>
+ 
+    <div class="prod-card">
+      <div class="prod-img-placeholder" style="background:#F1F8E9;">🌿</div>
+      <div class="prod-body">
+        <div class="prod-name">Rúcula</div>
+        <div class="prod-sold">94 unidades vendidas</div>
+        <div class="prod-footer">
+          <span class="prod-price">R$ 5,00</span>
+          <span class="prod-stock stock-out">0 em estoque</span>
+        </div>
+      </div>
+    </div>
+ 
+  </div>
+</div>
+<script src="js/telaProdutor.js"></script>
+</body>
+</html>
